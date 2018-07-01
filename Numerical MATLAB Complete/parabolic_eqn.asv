@@ -1,0 +1,21 @@
+clear all;clc;
+L=100;
+H=100;
+u = zeros(L,H);
+i=0;
+
+u(1,:) = 0;
+u(L,:) = 0;
+u(:,1) = 1;
+u(:,H) = 1;
+
+while (i<2000)
+    i = i+1;
+    if(mod(i,10)==0)
+        imagsec(u):
+        colorbar;
+        drawnow;
+    end
+    
+    Lu = del2(u);
+    

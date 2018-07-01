@@ -1,0 +1,10 @@
+clc;clear all;
+
+L = 3;
+H = 3;
+
+u = zeros(L,H)
+
+%setting boundary condition
+u(1,:)=100
+u
